@@ -22,10 +22,15 @@
 						<input type="text" id="search" autocomplete="off" name="q" maxlength="20" placeholder="<%= __('search') %>" />
 					</form>
 					<% } else { %>
-                      <form class="search" name="f1" action="http://www.baidu.com/baidu" target="_blank" id="scbar_form">
+					<form class="search" action="https://www.baidu.com/baidu" method="get" accept-charset="utf-8">
 						<label>Search</label>
-                        <input type="text" id="search" autocomplete="off" name="q" maxlength="20" placeholder="<%= __('search') %>" />
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="<%= __('search') %>" />
+						<input type="hidden" name="q" value="site:<%- config.url.replace(/^https?:\/\//, '') %>">
+					</form>
+                    <form class="search" name="f1" action="http://www.baidu.com/baidu" target="_blank" id="scbar_form">
+						<label>Search</label>
                         <input name="word" id="scbar_txt"/></td>
+                        <td class="scbar_btn_td"> <input type="submit" value="百度搜索" id="scbar_btn" /></td>
                       </form>
 					<% } %>
 					</li>
