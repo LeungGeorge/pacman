@@ -2,8 +2,6 @@
 menu:
   home: /
   archives: /archives
-  hexo: /hexo
-  ubuntu: /ubuntu
   about: /about
 ## you can create `tags` and `categories` folders in `../source`.
 ## And create a `index.md` file in each of them.
@@ -11,7 +9,7 @@ menu:
 ## layout: tags (or categories)
 ## title: tags (or categories)
 ## ---
-post_asset_folder: true
+post_asset_folder: false
 
 #### Widgets
 widgets:
@@ -20,6 +18,19 @@ widgets:
 - rss
 ## provide six widgets:category,tag,rss,archive,tagcloud,links.
 ## modify links in `/layout/_widget/links.ejs`.
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Archives
+## 2: Enable pagination
+## 1: Disable pagination
+## 0: Fully Disable
+archive: 2
+category: 2
+tag: 2
 
 #### RSS
 rss: /atom.xml ## RSS address.
